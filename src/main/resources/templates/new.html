@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{~/main.css}">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>3 de hands.be/index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--jqueries op datatables.net + link zelf aanvullen-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+    <link rel="stylesheet"th:href="@{css/main.css}">
+    <!--scriptjes (site bootstrap)-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- ook terug te vinden op datatables.net-->
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+
+
+
+
+</head>
+<body>
+<h1>New</h1>
+
+
+
+
+<div class="Blogform">
+    <form th:action="@{~/new}" method="post" th:object="${nProduct}">
+        <!--  span=blijft inline we willen deze enkel laten zie indie er fouten zijn-->
+        <!--  fields zit standaard in time leaf -->
+        <div class=""><label >Product</label></div>
+        <div class="Invulveld"><input type="text" th:field="*{productNaam}" id="productNaam"></div>
+        <div class="Error"><span th:if="${#fields.hasErrors('productNaam')}" th:errors="*{productNaam}"
+                                 class="error"></span></div>
+
+
+        <br>
+        <div class=""><label>Omschrijving</label></div>
+        <div class="Error"><span th:if="${#fields.hasErrors('Omschrijving')}" th:errors="*{omschrijving}"
+                                 class="error"></span></div>
+        <div class="Invulveld"><textarea rows="8" cols="30" th:field="*{omschrijving}" id="omschrijving"
+                                         placeholder="Omschrijving"></textarea></div>
+
+
+        <div class=""><label>Prijs </label></div>
+        <div class="Invulveld"><input type="text" th:field="*{prijs}" id="prijs"></div>
+        <div class="Error"><span th:if="${#fields.hasErrors('prijs')}" th:errors="*{prijs}"
+                                 class="error"></span></div>
+
+        <div class=""><label>Naam contactpersoon</label></div>
+        <div class="Invulveld"><input type="text" th:field="*{naamContactpersoon}" id="naamContactpersoon"></div>
+        <div class="Error"><span th:if="${#fields.hasErrors('naamContactpersoon')}" th:errors="*{naamContactpersoon}"
+                                 class="error"></span></div>
+
+        <div class=""><label>Email contactpersoon</label></div>
+        <div class="Invulveld"><input type="text" th:field="*{emailContactpersoon}" id="emailContactpersoon"></div>
+        <div class="Error"><span th:if="${#fields.hasErrors('emailContactpersoon')}" th:errors="*{emailContactpersoon}"
+                                 class="error"></span></div>
+
+
+
+        <br>
+        <div class=""><input th:value="#{submit}" type="submit"></div>
+        <br>
+
+    </form>
+</div>
+
+</body>
+</html>
