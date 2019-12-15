@@ -29,10 +29,11 @@
 </head>
 
 <body>
-<nav th:replace="~{menu::nav_menu(details)}"></nav>
 <h1>Details</h1>
 
-<div th:each="product:${id}">
+
+
+
     <div>
 
         <div>
@@ -40,7 +41,7 @@
         </div>
 
         <div>
-            <p th:text="${product.productNaam}"></p>
+            <p th:text="${product.productNaam}"> </p>
         </div>
 
     </div>
@@ -49,7 +50,7 @@
             <p>Omschrijving</p>
         </div>
         <div>
-            <p th:text="${product.omschrijving}"></p>
+            <<p th:text="${product.omschrijving}"> </p>
         </div>
     </div>
 
@@ -58,7 +59,7 @@
             <p>Prijs</p>
         </div>
         <div>
-            <p th:text="${product.prijs}"></p>
+            <p th:text="${product.prijs}"> </p>
         </div>
     </div>
 
@@ -67,7 +68,7 @@
             <p>Contactpersoon</p>
         </div>
         <div>
-            <p th:text="${product.naamContactpersoon}"></p>
+            <p th:text="${product.naamContactpersoon}"> </p>
         </div>
     </div>
 
@@ -76,7 +77,7 @@
             <p>email</p>
         </div>
         <div>
-            <p th:text="${product.emailContactpersoon}"></p>
+            <p th:text="${product.emailContactpersoon}"> </p>
         </div>
     </div>
 

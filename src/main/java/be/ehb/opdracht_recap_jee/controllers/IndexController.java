@@ -22,9 +22,9 @@ public class IndexController {
         return dao.findAll();
     }
 
-   @RequestMapping(value = {"id"}, method = RequestMethod.GET)
-   public String findById(@PathVariable("id") int id, ModelMap map) {
-       map.addAttribute( "Id", dao.findById(id).get());
+   @RequestMapping(value = {"id", "/details"}, method = RequestMethod.GET)
+  public String findById(@PathVariable("id") int id, ModelMap map) {
+      map.addAttribute( "id", dao.findById(id).get());
        return "detail";
    }
 
@@ -44,7 +44,7 @@ public class IndexController {
     //voor de details pagina
     @RequestMapping(value = {"/details"}, method = RequestMethod.GET)
     public String showDetails(ModelMap map) {
-        return "details";
+       return "details";
     }
     //voor new pagina
     @RequestMapping(value = {"/new"}, method = RequestMethod.GET)
@@ -61,7 +61,7 @@ public class IndexController {
         if(bindingResult.hasErrors())
             return "new";
         dao.save(nProduct);
-        return "redirect:/new";
+        return "redirect:/index";
     }
 
 }

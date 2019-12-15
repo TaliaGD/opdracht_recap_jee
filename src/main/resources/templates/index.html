@@ -24,17 +24,11 @@
 <div>
     <table class="producttable">
         <thead>
-      <!-- <tr>
+      <tr>
             <td>Product </td>
             <td>Prijs</td>
-            <td>
-                <nav th:fragment="nav_menu(page)" class="nav_menu">
-                    <lu>
-                        <li><a th:href="@{~/{id} (id= ${product.id})}">Details</a></li>
-                    </lu>
-                </nav>
-            </td>
-        </tr> -->
+            <td></td>
+        </tr>
         </thead>
         <tbody>
 
@@ -42,7 +36,14 @@
         <tr th:each="product:${all}">
             <td th:text="${product.productNaam}"> </td>
             <td th:text="${product.prijs}"> </td>
-            <td ></td>
+            <td >
+
+                <lu>
+                    <li><a th:href="@{~/{id} (id= ${product.id})}">Details</a></li>
+
+                </lu>
+
+        </td>
         </tr>
 
         </tbody>

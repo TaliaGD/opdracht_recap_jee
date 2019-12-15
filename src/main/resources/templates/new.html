@@ -30,7 +30,7 @@
 
 
 
-<div class="Blogform">
+<div class="">
     <form th:action="@{~/new}" method="post" th:object="${nProduct}">
         <!--  span=blijft inline we willen deze enkel laten zie indie er fouten zijn-->
         <!--  fields zit standaard in time leaf -->
@@ -63,11 +63,9 @@
         <div class="Error"><span th:if="${#fields.hasErrors('emailContactpersoon')}" th:errors="*{emailContactpersoon}"
                                  class="error"></span></div>
 
+      <input th:value="verzend" type="submit">
 
 
-        <br>
-        <div class=""><input th:value="#{submit}" type="submit"></div>
-        <br>
 
     </form>
 </div>

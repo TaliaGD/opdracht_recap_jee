@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 @Entity
 public class Product {
@@ -15,7 +16,7 @@ public class Product {
     public String productNaam;
     @NotBlank
     public String omschrijving;
-    @NotBlank
+    @NotNull
     public BigDecimal prijs;
     @NotBlank
     public String naamContactpersoon;
