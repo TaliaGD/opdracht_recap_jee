@@ -25,12 +25,15 @@
 
 </head>
 <body>
+<nav th:replace="~{menu::nav_menu(index)}" ></nav>
+<div class="all">
+
 <h1>New</h1>
 
 
 
 
-<div class="">
+<div >
     <form th:action="@{~/new}" method="post" th:object="${nProduct}">
         <!--  span=blijft inline we willen deze enkel laten zie indie er fouten zijn-->
         <!--  fields zit standaard in time leaf -->
@@ -69,6 +72,7 @@
 
     </form>
 </div>
-
+</div>
 </body>
+<footer>&copy; Dit is het einde :p </footer>
 </html>

@@ -1,0 +1,41 @@
+.all{
+    background-color: #dbfffa !important;
+    margin: auto;
+    padding: 5px;
+}
+.nav_menu{
+    width: 100%;
+    padding: 10px;
+
+    height: 80px;
+    top: 0;
+    left: 0;
+    background-color: cadetblue !important;
+}
+.nav_menu ul{
+    list-style: none;
+    padding: 0;
+}
+.nav_menu ul li {
+    display: inline-block;
+
+}
+.nav_menu ul li a{
+
+    padding: 5px ;
+    text-decoration: none;
+    font-size: 35px;
+    color: black;
+}
+.menu_tittel{
+
+}
+.menu_knoppen{
+    background-color: #6eb0b2;
+   float:right;
+    margin: 5px;
+
+}
+footer{
+
+}

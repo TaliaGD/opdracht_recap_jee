@@ -22,14 +22,6 @@ public class IndexController {
         return dao.findAll();
     }
 
-   @RequestMapping(value = {"id", "/details"}, method = RequestMethod.GET)
-  public String findById(@PathVariable("id") int id, ModelMap map) {
-      map.addAttribute( "id", dao.findById(id).get());
-       return "detail";
-   }
-
-
-
 
     //model atribute voor één nieuw product
     @ModelAttribute(value = "nProduct")
@@ -41,11 +33,7 @@ public class IndexController {
     public String showIndex(ModelMap map){
         return "index";
     }
-    //voor de details pagina
-    @RequestMapping(value = {"/details"}, method = RequestMethod.GET)
-    public String showDetails(ModelMap map) {
-       return "details";
-    }
+
     //voor new pagina
     @RequestMapping(value = {"/new"}, method = RequestMethod.GET)
     public String showNew(ModelMap map) {

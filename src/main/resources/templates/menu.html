@@ -15,16 +15,17 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!-- ook terug te vinden op datatables.net-->
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<div>
-    <nav th:fragment="nav_menu(page)" class="nav_menu">
+
+<nav th:fragment="nav_menu(page)" class="nav_menu">
         <ul>
-            <li><a th:href="@{~/index}" th:class="${(page=='index')?'active':''}"> 3de hands.be</a></li></li>
-            <li><a th:href="@{~/index}" th:class="${(page=='index')?'active':''}"> Home</a></li></li>
-            <li><a th:href="@{~/new}" th:class="${(page=='new')?'active':''}">New</a></li>
-            <li><a th:href="@{~/about}" th:class="${(page=='about')?'active':''}">About</a></li>
+            <li class="menu_tittel"><a th:href="@{~/index}" th:class="${(page=='index')?'active':''}"> 3de hands.be</a></li></li>
+            <li class="menu_knoppen"><a th:href="@{~/index}" th:class="${(page=='index')?'active':''}"> Home</a></li></li>
+            <li class="menu_knoppen"><a th:href="@{~/new}" th:class="${(page=='new')?'active':''}">New</a></li>
+            <li class="menu_knoppen"><a th:href="@{~/about}" th:class="${(page=='about')?'active':''}">About</a></li>
+
         </ul>
 
     </nav>
-</div>
+
 
 </html>

@@ -29,60 +29,47 @@
 </head>
 
 <body>
-<h1>Details</h1>
+<nav th:replace="~{menu::nav_menu(index)}" ></nav>
+<div class="all">
+
+    <h1>Details</h1>
 
 
 
+<div  th:object="${details}" >
 
-    <div>
 
-        <div>
+
             <p>Product</p>
-        </div>
 
-        <div>
-            <p th:text="${product.productNaam}"> </p>
-        </div>
+            <p th:text="*{productNaam}"> </p>
 
-    </div>
-    <div>
-        <div>
+
+
             <p>Omschrijving</p>
-        </div>
-        <div>
-            <<p th:text="${product.omschrijving}"> </p>
-        </div>
-    </div>
 
-    <div>
-        <div>
+            <p th:text="*{omschrijving}"> </p>
+
+
+
+
             <p>Prijs</p>
-        </div>
-        <div>
-            <p th:text="${product.prijs}"> </p>
-        </div>
-    </div>
 
-    <div>
-        <div>
+            <p th:text="*{prijs}"> </p>
+
+
+
             <p>Contactpersoon</p>
-        </div>
-        <div>
-            <p th:text="${product.naamContactpersoon}"> </p>
-        </div>
-    </div>
 
-    <div>
-        <div>
+            <p th:text="*{naamContactpersoon}"> </p>
+
+
+
             <p>email</p>
-        </div>
-        <div>
-            <p th:text="${product.emailContactpersoon}"> </p>
-        </div>
-    </div>
 
+            <p th:email="*{emailContactpersoon}"> </p>
 </div>
-
-
+</div>
 </body>
+<footer>&copy; Dit is het einde :p </footer>
 </html>

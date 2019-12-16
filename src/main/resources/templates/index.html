@@ -20,14 +20,16 @@
 </head>
 <body>
 <nav th:replace="~{menu::nav_menu(index)}" ></nav>
-<h1>3 de hands.be</h1>
-<div>
+<div class="all">
+
+<h1>Products</h1>
+
     <table class="producttable">
         <thead>
       <tr>
-            <td>Product </td>
-            <td>Prijs</td>
-            <td></td>
+            <th>Product </th>
+            <th>Prijs</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -36,21 +38,15 @@
         <tr th:each="product:${all}">
             <td th:text="${product.productNaam}"> </td>
             <td th:text="${product.prijs}"> </td>
-            <td >
-
-                <lu>
-                    <li><a th:href="@{~/{id} (id= ${product.id})}">Details</a></li>
-
-                </lu>
-
-        </td>
+            <td ><a th:href="'details/'+${product.id}">Details</a></td>
         </tr>
 
         </tbody>
 
+
     </table>
 
-
+</div>
 
 
 
@@ -58,4 +54,5 @@
 
 </div>
 </body>
+<footer>&copy; Dit is het einde :p </footer>
 </html>
